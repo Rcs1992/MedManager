@@ -512,22 +512,22 @@
     const API_URL = 'https://script.google.com/macros/s/AKfycbwL3Q8dk7bQ6iCIdHn6PbVGxFT0atMNWqPQWRH3GqfuyhuyLTrihLfALD7IxaNzc7mb2g/exec';
 
     // ---------- FUNÇÃO AUXILIAR DE COMUNICAÇÃO ----------
-    async function callServer(action, data = {}) {
-        try {
-            const response = await fetch(API_URL, {
-                method: 'POST',
-                mode: 'cors',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ action, ...data })
-            });
-            if (!response.ok) throw new Error(`HTTP ${response.status}`);
-            const result = await response.json();
-            return result;
-        } catch (error) {
-            console.error(`Erro na chamada ${action}:`, error);
-            throw error;
-        }
+   async function callServer(action, data = {}) {
+    try {
+        const response = await fetch(API_URL, {
+            method: 'POST',
+            mode: 'cors',
+            headers: { 'Content-Type': 'text/plain' },
+            body: JSON.stringify({ action, ...data })
+        });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const result = await response.json();
+        return result;
+    } catch (error) {
+        console.error(`Erro na chamada ${action}:`, error);
+        throw error;
     }
+}
 
     // ---------- Variáveis globais ----------
     let medicoAtual = { nome: '', crm: '', rqe: '' };
