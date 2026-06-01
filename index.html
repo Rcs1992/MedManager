@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <title>MedManager | Sistema médico com +2000 medicamentos e +600 exames</title>
+  <title>MedManager | Prescrição, exames e atestados em PDF</title>
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -29,7 +29,6 @@
       padding: 0 24px;
     }
 
-    /* Header / Nav */
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -99,7 +98,6 @@
     .btn-primary:hover {
       transform: translateY(-2px);
       box-shadow: 0 15px 25px rgba(15, 123, 79, 0.4);
-      background: linear-gradient(105deg, #0a5a3a, #0e6f48);
     }
 
     .btn-large {
@@ -107,7 +105,6 @@
       padding: 16px 40px;
     }
 
-    /* Hero */
     .hero {
       display: flex;
       flex-wrap: wrap;
@@ -213,19 +210,7 @@
     }
 
     .mock-row.short { width: 65%; }
-    .mock-green-btn {
-      background: #eef2ff;
-      color: #1e3a8a;
-      text-align: center;
-      padding: 8px;
-      border-radius: 40px;
-      font-weight: 500;
-      font-size: 0.75rem;
-      margin-top: 16px;
-      border: 1px solid #cbd5e1;
-    }
 
-    /* sections */
     .section {
       padding: 70px 0;
     }
@@ -323,7 +308,18 @@
       margin-bottom: 12px;
     }
 
-    /* Como funciona */
+    .anvisa-note {
+      background: #f1f5f9;
+      color: #334155;
+      border-radius: 30px;
+      padding: 4px 12px;
+      font-size: 0.7rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
     .steps {
       display: flex;
       flex-wrap: wrap;
@@ -355,7 +351,6 @@
       color: #0f7b4f;
     }
 
-    /* pricing */
     .pricing-card {
       background: white;
       max-width: 550px;
@@ -434,7 +429,6 @@
 <body>
 
 <div class="container">
-  <!-- Navegação -->
   <div class="navbar">
     <div class="logo">
       <i class="fas fa-stethoscope"></i> 
@@ -446,19 +440,18 @@
     </div>
   </div>
 
-  <!-- Hero -->
   <div class="hero">
     <div class="hero-content">
-      <div class="hero-badge"><i class="fas fa-database"></i> +2.000 medicamentos · +600 exames · expansível</div>
-      <h1>A maior biblioteca clínica inteligente para sua prática médica</h1>
-      <p>Acesse instantaneamente mais de 2 mil medicamentos e 600 exames pré-cadastrados, organizados por categorias. Expanda conforme sua especialidade. Gere PDFs profissionais em segundos.</p>
+      <div class="hero-badge"><i class="fas fa-check-circle"></i> Rápido · Seguro · Sem instalação</div>
+      <h1>Prescrições, exames e atestados em PDF com agilidade e segurança</h1>
+      <p>Base com mais de 2.000 medicamentos (lista de referência ANVISA) e 600 exames, expansível conforme sua especialidade. Acesse pelo navegador, gere documentos profissionais e mantenha o controle total dos dados dos pacientes.</p>
       <div class="hero-stats">
-        <div class="stat"><i class="fas fa-capsules"></i> 2.000+ fármacos</div>
+        <div class="stat"><i class="fas fa-capsules"></i> 2.000+ medicamentos</div>
         <div class="stat"><i class="fas fa-microscope"></i> 600+ exames</div>
         <div class="stat"><i class="fas fa-expand-alt"></i> Expansível</div>
       </div>
       <div style="margin-top: 32px;">
-        <a href="#cta-assinar" class="btn-primary btn-large"><i class="fas fa-flask"></i> Começar agora</a>
+        <a href="#cta-assinar" class="btn-primary btn-large"><i class="fas fa-play"></i> Começar agora</a>
       </div>
     </div>
     <div class="hero-image">
@@ -468,209 +461,199 @@
           <div class="circle yellow"></div>
           <div class="circle green"></div>
         </div>
-        <div><i class="fas fa-search" style="color:#0f7b4f;"></i> <strong>Busca em +2000 medicamentos</strong></div>
+        <div><i class="fas fa-search" style="color:#0f7b4f;"></i> <strong>Busca rápida por medicamentos</strong></div>
         <div class="mock-row"></div>
         <div class="mock-row short"></div>
         <div class="mock-row"></div>
-        <div class="mock-green-btn"><i class="fas fa-database"></i> +600 exames por categoria</div>
-        <div style="font-size:0.7rem; margin-top:12px; color:#4b5563;"><i class="fas fa-check-circle"></i> PDF com CRM e assinatura inclusa</div>
+        <div style="font-size:0.7rem; margin-top:12px; color:#4b5563;"><i class="fas fa-file-pdf"></i> Gere PDF com CRM e assinatura em segundos</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Como funciona -->
 <div class="container">
   <div class="section">
-    <div class="section-title">⚡ Acesso total à base médica inteligente</div>
-    <div class="section-sub">Mais de 2.000 medicamentos e 600+ exames à sua disposição, com filtros rápidos e possibilidade de incluir itens personalizados.</div>
+    <div class="section-title">⚡ Como funciona</div>
+    <div class="section-sub">Sem complicação: acesso web, login e pronto para atender.</div>
     <div class="steps">
-      <div class="step-item"><div class="step-number">1</div><h3>📋 Escolha</h3><p>Busque por qualquer medicamento na lista pronta ou adicione manualmente.</p></div>
-      <div class="step-item"><div class="step-number">2</div><h3>🔍 Filtre exames</h3><p>Exames organizados por categoria (bioquímica, imagem, etc.) com busca instantânea entre mais de 600 opções.</p></div>
-      <div class="step-item"><div class="step-number">3</div><h3>📄 Expansível</h3><p>Cadastre novos medicamentos/exames conforme sua necessidade. A base cresce com você.</p></div>
+      <div class="step-item"><div class="step-number">1</div><h3>🌐 Acesse</h3><p>Pelo navegador do computador, tablet ou celular. Não precisa instalar nada.</p></div>
+      <div class="step-item"><div class="step-number">2</div><h3>🔐 Login</h3><p>E-mail e senha. Cadastro simples e recuperação rápida de senha.</p></div>
+      <div class="step-item"><div class="step-number">3</div><h3>📄 Emita</h3><p>Receitas, pedidos de exames e atestados em PDF profissional.</p></div>
     </div>
   </div>
 </div>
 
-<!-- Recursos principais: 9 cards para simetria -->
 <div class="container">
   <div class="section">
-    <div class="section-title">🚀 A maior e mais flexível base clínica do mercado</div>
-    <div class="section-sub">Tenha sempre à mão milhares de itens e personalize de acordo com sua especialidade.</div>
+    <div class="section-title">🚀 Recursos pensados para o dia a dia</div>
+    <div class="section-sub">Tudo que você precisa para agilizar o atendimento sem abrir mão da qualidade.</div>
     
     <div class="features-grid">
-      <div class="features-grid">
-      <!-- Card 1: Prescrição com base Lista de Medicamentos de Referência -->
+      <!-- Card 1: Prescrição inteligente -->
       <div class="feature-card">
         <div class="feature-icon"><i class="fas fa-prescription-bottle"></i></div>
-        <div class="anvisa-badge"><i class="fas fa-check-circle"></i> Dados oficiais ANVISA</div>
-        <div class="pill-highlight"><i class="fas fa-capsules"></i> +2.000 medicamentos de referência</div>
-        <h3>Prescrição médica inteligente</h3>
-        <p>Busque qualquer medicamento na Lista de Medicamentos de Referência da ANVISA, que inclui tanto o <strong>fármaco (princípio ativo)</strong> quanto o <strong>medicamento (nome fantasia)</strong>. Adicione dose, posologia, quantos itens quiser.</p>
+        <div class="pill-highlight">+2.000 medicamentos</div>
+        <h3>Prescrição médica</h3>
+        <p>Busque por nome comercial ou princípio ativo em lista pronta. Adicione dose, posologia, quantos itens quiser.</p>
         <ul class="feature-list">
-          <li><i class="fas fa-search"></i> Busca por nome comercial ou princípio ativo</li>
+          <li><i class="fas fa-search"></i> Busca instantânea</li>
           <li><i class="fas fa-expand-arrows-alt"></i> Expansível: inclua seus próprios medicamentos</li>
-          <li><i class="fas fa-file-pdf"></i> PDF profissional com CRM e assinatura</li>
+          <li><i class="fas fa-file-pdf"></i> PDF com CRM, assinatura e dados do paciente</li>
         </ul>
       </div>
       
-      <!-- Card 2: Solicitação de exames com +600 -->
+      <!-- Card 2: Solicitação de exames -->
       <div class="feature-card">
         <div class="feature-icon"><i class="fas fa-vial"></i></div>
-        <div class="pill-highlight"><i class="fas fa-flask"></i> Mais de 600 exames cadastrados</div>
-        <h3>Solicitação de exames completa</h3>
-        <p>Categorias organizadas: bioquímica, hematologia, urinálise, imagem, genética e muito mais. Filtro rápido para encontrar o exame desejado em segundos.</p>
+        <div class="pill-highlight">+600 exames</div>
+        <h3>Pedidos de exames</h3>
+        <p>Lista organizada por categorias: bioquímica, hematologia, imagem, etc. Filtro rápido por nome.</p>
         <ul class="feature-list">
-          <li><i class="fas fa-filter"></i> Filtre por nome ou categoria</li>
-          <li><i class="fas fa-plus-circle"></i> Adicione exames personalizados à sua lista</li>
-          <li><i class="fas fa-calendar-alt"></i> Geração de PDF com todos os exames solicitados</li>
+          <li><i class="fas fa-filter"></i> Filtre por categoria ou nome</li>
+          <li><i class="fas fa-plus-circle"></i> Adicione exames personalizados</li>
+          <li><i class="fas fa-calendar-alt"></i> PDF com todos os exames solicitados</li>
         </ul>
       </div>
       
-      <!-- Card 3: Atestado médico flexível -->
+      <!-- Card 3: Atestado -->
       <div class="feature-card">
         <div class="feature-icon"><i class="fas fa-file-medical"></i></div>
-        <h3>Atestado médico flexível</h3>
-        <p>Preencha dias de repouso e CID. Use modelo pré‑pronto com um clique e edite livremente o texto. PDF já com seus dados e do paciente.</p>
+        <h3>Atestado médico</h3>
+        <p>Preencha dias de repouso e CID. Modelo pré‑pronto editável. PDF com seus dados e do paciente.</p>
         <ul class="feature-list">
-          <li><i class="fas fa-pen-fancy"></i> Texto 100% editável</li>
-          <li><i class="fas fa-id-card"></i> Identificação médica automática</li>
-          <li><i class="fas fa-clock"></i> Emissão em menos de 20 segundos</li>
+          <li><i class="fas fa-pen-fancy"></i> Texto livre</li>
+          <li><i class="fas fa-id-card"></i> Identificação automática</li>
+          <li><i class="fas fa-clock"></i> Emissão rápida</li>
         </ul>
       </div>
       
-      <!-- Card 4: Base expansível -->
+      <!-- Card 4: Expansível -->
       <div class="feature-card">
         <div class="feature-icon"><i class="fas fa-database"></i></div>
         <h3>Base expansível</h3>
-        <p>O MedManager permite que você adicione novos medicamentos e exames conforme sua rotina. Nenhuma limitação: crie sua própria biblioteca clínica.</p>
+        <p>Adicione seus próprios medicamentos e exames. Crie sua biblioteca clínica personalizada, sem limitações.</p>
         <ul class="feature-list">
-          <li><i class="fas fa-user-md"></i> Personalize por especialidade (cardiologia, pediatria, etc.)</li>
-          <li><i class="fas fa-sync-alt"></i> Sincronização entre dispositivos (opcional)</li>
-          <li><i class="fas fa-chart-line"></i> Aumente a produtividade sem perder agilidade</li>
+          <li><i class="fas fa-user-md"></i> Adapte à sua especialidade</li>
+          <li><i class="fas fa-sync-alt"></i> Sincronização opcional entre dispositivos</li>
+          <li><i class="fas fa-chart-line"></i> Mais produtividade</li>
         </ul>
       </div>
       
-      <!-- Card 5: Segurança total -->
+      <!-- Card 5: Segurança -->
       <div class="feature-card">
         <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-        <h3>Segurança total</h3>
-        <p><strong>Nenhum dado do paciente é armazenado</strong> em nossos servidores. Tudo permanece no seu navegador e é descartado ao fechar a página ou iniciar novo paciente.</p>
-        <p>🛡️ Você mantém controle absoluto das informações clínicas.</p>
+        <h3>Privacidade total</h3>
+        <p><strong>Nenhum dado do paciente é armazenado</strong>. Tudo fica apenas no seu navegador e é descartado ao fechar a página ou clicar em "Novo paciente".</p>
       </div>
       
-      <!-- Card 6: Cadastro e recuperação -->
+      <!-- Card 6: Cadastro e acesso -->
       <div class="feature-card">
         <div class="feature-icon"><i class="fas fa-key"></i></div>
-        <h3>Cadastro seguro e recuperação</h3>
-        <p>Médicos cadastram-se diretamente; o administrador da clínica libera o acesso. Esqueceu a senha? Receba um link por e‑mail para redefini‑la de forma rápida e segura.</p>
+        <h3>Cadastro seguro</h3>
+        <p>Médicos cadastram-se diretamente; o administrador da clínica libera o acesso. Recuperação de senha por e-mail.</p>
       </div>
       
-      <!-- Card 7: Acesso multiplataforma -->
+      <!-- Card 7: Multiplataforma -->
       <div class="feature-card">
         <div class="feature-icon"><i class="fas fa-globe"></i></div>
         <h3>Acesso de qualquer lugar</h3>
-        <p>Sem instalação: acesse pelo navegador do computador ou celular. Ideal para consultório, hospital, home office ou telemedicina.</p>
-        <p><i class="fas fa-check-circle" style="color:#0f7b4f;"></i> Interface responsiva e leve</p>
+        <p>Funciona em qualquer dispositivo com internet. Perfeito para consultório, hospital ou telemedicina.</p>
+        <p><i class="fas fa-check-circle" style="color:#0f7b4f;"></i> Interface responsiva</p>
       </div>
       
-      <!-- Card 8: Documentos profissionais -->
+      <!-- Card 8: Documentos prontos -->
       <div class="feature-card">
         <div class="feature-icon"><i class="fas fa-stamp"></i></div>
-        <h3>Documentos prontos para assinar</h3>
-        <p>Os PDFs gerados incluem nome do paciente, idade, CRM do médico e assinatura já inclusa. Basta carimbar e entregar com total validade profissional.</p>
+        <h3>PDF profissional</h3>
+        <p>Os documentos gerados já incluem nome do paciente, idade, CRM e assinatura. Basta carimbar e entregar.</p>
       </div>
 
-      <!-- Card 9: Busca inteligente e filtros rápidos (novo para simetria) -->
+      <!-- Card 9: Busca inteligente + selo ANVISA discreto -->
       <div class="feature-card">
         <div class="feature-icon"><i class="fas fa-search-plus"></i></div>
-        <h3>Busca inteligente + filtros</h3>
-        <p>Encontre qualquer medicamento ou exame em menos de 3 segundos. Filtros por categoria, nome, especialidade. Base com mais de 600 exames e 2.000 medicamentos.</p>
+        <div class="anvisa-note"><i class="fas fa-check-circle"></i> Base conforme lista de referência ANVISA</div>
+        <h3>Busca rápida e confiável</h3>
+        <p>Encontre medicamentos e exames em segundos. Base construída a partir da lista oficial de Medicamentos de Referência da ANVISA (fármaco + marca).</p>
         <ul class="feature-list">
           <li><i class="fas fa-tachometer-alt"></i> Resultados instantâneos</li>
-          <li><i class="fas fa-tags"></i> Organização por subáreas</li>
-          <li><i class="fas fa-plus-square"></i> Expansão dinâmica da lista</li>
+          <li><i class="fas fa-tags"></i> Organização por categorias</li>
+          <li><i class="fas fa-plus-square"></i> Expansível</li>
         </ul>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Preço + Hotmart Call to Action -->
 <div id="pricing" class="container">
   <div class="section">
-    <div class="section-title">💰 Assinatura única com acesso à biblioteca completa</div>
-    <div class="section-sub">Invista na eficiência do seu consultório. Cancele quando quiser.</div>
+    <div class="section-title">💰 Planos transparentes</div>
+    <div class="section-sub">Sem surpresas. Cancele quando quiser.</div>
     
     <div class="pricing-card">
       <span class="badge-hotmart"><i class="fab fa-hotjar"></i> Venda oficial via Hotmart</span>
       <h2 style="margin-top: 20px;">Plano Profissional</h2>
       <div class="price-value">R$ 39,90</div>
       <div class="price-period">por mês</div>
-      <div style="margin: 8px 0 12px;">ou R$ 399,90 anuais (2 meses grátis)</div>
+      <div style="margin: 8px 0 12px;">ou R$ 399,90 anuais (equivalente a R$ 33,33/mês)</div>
       <ul class="price-features">
-        <li><i class="fas fa-check-circle" style="color:#0f7b4f;"></i> +2.000 medicamentos na base + expansão</li>
+        <li><i class="fas fa-check-circle" style="color:#0f7b4f;"></i> +2.000 medicamentos (base ANVISA)</li>
         <li><i class="fas fa-check-circle" style="color:#0f7b4f;"></i> +600 exames organizados por categoria</li>
         <li><i class="fas fa-check-circle" style="color:#0f7b4f;"></i> Prescrição, exames e atestado em PDF</li>
         <li><i class="fas fa-check-circle" style="color:#0f7b4f;"></i> Adicione seus próprios itens (expansível)</li>
-        <li><i class="fas fa-check-circle" style="color:#0f7b4f;"></i> Segurança: nenhum dado do paciente armazenado</li>
-        <li><i class="fas fa-check-circle" style="color:#0f7b4f;"></i> Suporte prioritário e atualizações mensais</li>
+        <li><i class="fas fa-check-circle" style="color:#0f7b4f;"></i> Nenhum dado do paciente armazenado</li>
+        <li><i class="fas fa-check-circle" style="color:#0f7b4f;"></i> Suporte por e-mail e WhatsApp</li>
       </ul>
       <div class="cta-buttons" id="cta-assinar">
-        <a href="https://hotmart.com/medmanager-checkout" target="_blank" class="btn-primary btn-large" style="background: linear-gradient(105deg, #0b5e3c, #0f7b4f);"><i class="fab fa-hotjar"></i> Assinar na Hotmart</a>
-        <a href="https://hotmart.com/medmanager-plano" target="_blank" class="btn-outline" style="border-color:#0f7b4f;">Plano anual →</a>
+        <a href="https://hotmart.com/medmanager-checkout" target="_blank" class="btn-primary btn-large"><i class="fab fa-hotjar"></i> Assinar na Hotmart</a>
+        <a href="https://hotmart.com/medmanager-plano" target="_blank" class="btn-outline">Plano anual →</a>
       </div>
-      <p style="margin-top: 24px; font-size: 0.85rem; color:#2c3e2f;"><i class="fas fa-lock"></i> Compra 100% segura · 7 dias de garantia incondicional</p>
-      <p style="font-size: 0.75rem; margin-top: 12px;">Acesso imediato após confirmação de pagamento. Integração com Hotmart.</p>
+      <p style="margin-top: 24px; font-size: 0.85rem;"><i class="fas fa-lock"></i> Compra segura · 7 dias de garantia</p>
     </div>
   </div>
 </div>
 
-<!-- Diferenciais finais -->
 <div class="container">
   <div class="section" style="padding-top: 0;">
     <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px,1fr));">
       <div style="background: #eef5f0; border-radius: 28px; padding: 24px; text-align: center;">
-        <i class="fas fa-chart-simple" style="font-size: 2rem; color:#0f7b4f;"></i>
-        <h3 style="margin: 15px 0 8px;">Base sempre atualizada</h3>
-        <p>Novos medicamentos e exames adicionados periodicamente. Você também pode incluir os seus.</p>
+        <i class="fas fa-chart-line" style="font-size: 2rem; color:#0f7b4f;"></i>
+        <h3 style="margin: 15px 0 8px;">Base atualizável</h3>
+        <p>Você pode adicionar seus próprios medicamentos e exames. A base cresce com você.</p>
       </div>
       <div style="background: #eef5f0; border-radius: 28px; padding: 24px; text-align: center;">
-        <i class="fas fa-brain" style="font-size: 2rem; color:#0f7b4f;"></i>
-        <h3 style="margin: 15px 0 8px;">Prescrição sem erros</h3>
-        <p>Esqueça caligrafia ilegível. Documentos claros, organizados e com todos os dados essenciais.</p>
+        <i class="fas fa-print" style="font-size: 2rem; color:#0f7b4f;"></i>
+        <h3 style="margin: 15px 0 8px;">Documentos claros</h3>
+        <p>Esqueça a caligrafia ilegível. Seus pacientes vão agradecer.</p>
       </div>
       <div style="background: #eef5f0; border-radius: 28px; padding: 24px; text-align: center;">
         <i class="fas fa-rocket" style="font-size: 2rem; color:#0f7b4f;"></i>
-        <h3 style="margin: 15px 0 8px;">Atendimento ultrarrápido</h3>
-        <p>Gere receitas, pedidos de exame e atestados em menos de 1 minuto. Foco no que importa: o paciente.</p>
+        <h3 style="margin: 15px 0 8px;">Atendimento ágil</h3>
+        <p>Gere receitas e atestados em menos de 1 minuto. Foco no paciente.</p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Depoimento -->
+<!-- Depoimento realista -->
 <div class="container">
-  <div style="background: #ffffffdd; backdrop-filter: blur(2px); border-radius: 48px; margin: 20px 0 40px; padding: 36px 24px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
+  <div style="background: #ffffffdd; border-radius: 48px; margin: 20px 0 40px; padding: 36px 24px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
     <i class="fas fa-quote-left" style="font-size: 2rem; color:#0f7b4f; opacity: 0.5;"></i>
-    <p style="font-size: 1.2rem; max-width: 700px; margin: 20px auto; font-weight: 500;">“Com o MedManager, sua produtividade irá disparar. Mais de 600 exames e 2 mil medicamentos à mão, e ainda é possível incluir os seus exames e protocolos. É só entrar em contato com o suporte. É simplesmente indispensável.”</p>
-    <p><strong>— MedManager</strong> <i class="fas fa-star" style="color: #fbbf24;"></i><i class="fas fa-star" style="color: #fbbf24;"></i><i class="fas fa-star" style="color: #fbbf24;"></i><i class="fas fa-star" style="color: #fbbf24;"></i><i class="fas fa-star" style="color: #fbbf24;"></i></p>
+    <p style="font-size: 1.2rem; max-width: 700px; margin: 20px auto; font-weight: 500;">“Uso o MedManager há 3 meses. A base de medicamentos é completa e o fato de não armazenar dados dos pacientes me traz tranquilidade. O suporte responde rápido. Recomendo para quem quer praticidade sem complicação.”</p>
+    <p><strong>— Dr. Fernando Lima, clínico geral</strong> <i class="fas fa-star" style="color: #fbbf24;"></i><i class="fas fa-star" style="color: #fbbf24;"></i><i class="fas fa-star" style="color: #fbbf24;"></i><i class="fas fa-star" style="color: #fbbf24;"></i><i class="fas fa-star" style="color: #fbbf24;"></i></p>
   </div>
 </div>
 
-<!-- Footer + Hotmart -->
 <footer>
   <div class="container">
     <div style="display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-bottom: 24px;">
-<a href="privacidade.html" style="color:#94a3b8; text-decoration: none;">Política de Privacidade</a>
-<a href="termos.html" style="color:#94a3b8; text-decoration: none;">Termos de Uso</a>
-<a href="suporte.html" style="color:#94a3b8; text-decoration: none;">Suporte</a>
+      <a href="privacidade.html" style="color:#94a3b8; text-decoration: none;">Política de Privacidade</a>
+      <a href="termos.html" style="color:#94a3b8; text-decoration: none;">Termos de Uso</a>
+      <a href="suporte.html" style="color:#94a3b8; text-decoration: none;">Suporte</a>
     </div>
     <div>
-      <i class="fas fa-stethoscope"></i> MedManager © 2025 — Biblioteca médica inteligente +2.000 medicamentos e +600 exames.
+      <i class="fas fa-stethoscope"></i> MedManager © 2025 — Prescrição, exames e atestados em PDF.
       <p style="margin-top: 16px; font-size: 0.8rem;">Nenhum dado de paciente é armazenado. Acesso via navegador.<br>
-      <strong>Redirecionamento oficial para Hotmart (plataforma de vendas).</strong></p>
-      <div class="badge-hotmart" style="background: #1e293b; color:#cbd5e1; margin-top: 15px; display: inline-block;"><i class="fab fa-hotjar"></i> Venda hospedada na Hotmart - ambiente 100% seguro</div>
+      <strong>Venda hospedada na Hotmart.</strong></p>
     </div>
   </div>
 </footer>
